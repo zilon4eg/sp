@@ -434,10 +434,18 @@ body {
 
 .modal_basket-footer {
   display: flex;
+  flex-direction: column;
   flex-wrap: nowrap;
-  justify-content: space-between;
-  align-items: baseline;
+  align-items: center;
   margin: 5%;
+  font-weight: bold;
+}
+
+.modal_basket-footer a {
+  text-decoration:none;
+  color: #2e581f;
+  font-weight: bold;
+  font-size: 18px;
 }
 
 .modal_basket-btn {
@@ -465,6 +473,8 @@ body {
   align-items: center;
   font-size: 22px;
   font-weight: bold;
+  margin-left: auto;
+  margin-bottom: 20px;
 }
 
 .modal_basket-result-price {
@@ -490,6 +500,13 @@ body {
 .modal_basket-close:hover {
   background-color: red;
   box-shadow: 0 0 7px #444;
+  cursor: pointer;
+}
+
+svg:hover,
+.side_menu-backet:hover,
+.side_menu-backet-count:hover {
+  cursor: pointer;
 }
 
 /* Видимость и невидимость блоков */
