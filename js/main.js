@@ -265,7 +265,7 @@ function burgerMenu() {
         burgerMenuMibile.style.display = 'none';
         sideMenuBasketMobile.style.display = 'none';
         sideMenu.style.display = 'flex';
-        dishesList.style.width = '';
+        dishesList.style.width = 'calc(100% - 200px)';
     });
 
     const burgerMenu = document.querySelector('.side_menu-burger');
@@ -273,7 +273,7 @@ function burgerMenu() {
         burgerMenuMibile.style.display = '';
         sideMenuBasketMobile.style.display = '';
         sideMenu.style.display = 'none';
-        dishesList.style.width = 'calc(100% - 200px)';
+        dishesList.style.width = '';
     });
 }
 
@@ -290,7 +290,7 @@ function orientationChange() {
             burgerMenuMibile.style.display = 'none';
             sideMenuBasketMobile.style.display = 'none';
             sideMenu.style.display = 'flex';
-            dishesList.style.width = '';
+            dishesList.style.width = 'calc(100% - 200px)';
         }
     }, false);
 }
