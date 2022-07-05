@@ -6,12 +6,12 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Сфера питания</title>
-    <link rel="stylesheet" href="../sp/css/style.css">
-    <link rel="icon" href="../sp/favicon.ico"/>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="../favicon.ico"/>
 </head>
 <body>
-    <div class="modal_basket">
-        <div class="modal_basket_content">
+    <div class="modal_windows hidden">
+        <div class="modal_basket">
             <div class="modal_basket-close">
                 <svg viewBox="0 0 50 50" class="modal_basket-item-counter-inc">
                     <line x1="5" y1="5" x2="45" y2="45" stroke-width="8" stroke="black" stroke-linecap="round"/>
@@ -19,9 +19,9 @@
                 </svg>
             </div>
             <div class="modal_basket-list">
-                <div class="empty_modal_basket-item" data-id="0">
+                <div class="empty_modal_basket-item hidden" data-id="0">
                     <div class="modal_basket-item-img">
-                        <img src="../sp/img/dishes/no_image-800x800.png">
+                        <img src="../img/dishes/no_image-800x800.png">
                     </div>
                     <div class="modal_basket-item-description">
                         <div class="modal_basket-item-title">
@@ -35,19 +35,21 @@
                             <div class="modal_basket-item-weight-letter">г</div>
                         </div>
                     </div>
-                    <div class="modal_basket-item-counter">
-                        <svg viewBox="0 0 100 100" class="modal_basket-item-counter-dec">
-                            <line x1="5" y1="50" x2="95" y2="50" stroke-width="9" stroke="black" stroke-linecap="round"/>
-                        </svg>
-                        <div class="modal_basket-item-counter-count">1</div>
-                        <svg viewBox="0 0 100 100" class="modal_basket-item-counter-inc">
-                            <line x1="5" y1="50" x2="95" y2="50" stroke-width="9" stroke="black" stroke-linecap="round"/>
-                            <line x1="60" y1="5" x2="40" y2="95" stroke-width="9" stroke="black" stroke-linecap="round"/>
-                        </svg>
-                    </div>
-                    <div class="modal_basket-item-price">
-                        <div class="modal_basket-item-price-number">0</div>
-                        <div class="modal_basket-item-price-letter">&#8381;</div>
+                    <div class="modal_basket-item-counter-price">
+                        <div class="modal_basket-item-counter">
+                            <svg viewBox="0 0 100 100" class="modal_basket-item-counter-dec">
+                                <line x1="5" y1="50" x2="95" y2="50" stroke-width="9" stroke="black" stroke-linecap="round"/>
+                            </svg>
+                            <div class="modal_basket-item-counter-count">1</div>
+                            <svg viewBox="0 0 100 100" class="modal_basket-item-counter-inc">
+                                <line x1="5" y1="50" x2="95" y2="50" stroke-width="9" stroke="black" stroke-linecap="round"/>
+                                <line x1="60" y1="5" x2="40" y2="95" stroke-width="9" stroke="black" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <div class="modal_basket-item-price">
+                            <div class="modal_basket-item-price-number">0</div>
+                            <div class="modal_basket-item-price-letter">&#8381;</div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -68,7 +70,7 @@
 
     <header class="header">
         <div>
-            <a href="https://sferapitaniya.github.io/sp/"><img class="header_logo" src="../sp/img/logo/sp-logo.png" alt="Сфера Питания"></a>
+            <a href="https://sferapitaniya.github.io/sp/"><img class="header_logo" src="../img/logo/sp-logo.png" alt="Сфера Питания"></a>
         </div>
         <address class="header_contacts">
             <a href="mailto:office@sferapitania.ru">office@sferapitania.ru</a>
@@ -77,30 +79,44 @@
         </address>
     </header>
     <div class="middle_block">
+        <div class="side_menu-burger-mobile">
+            <div class="burger_top-mobile"></div>
+            <div class="burger_middle-mobile"></div>
+            <div class="burger_bottom-mobile"></div>
+        </div>
+        <div class="side_menu-basket-btn side_menu-basket-mobile hidden">
+            <div class="side_menu-basket-count side_menu-basket-count-mobile">0</div>
+            <img src="../img/sidemenu/ingridients-black-50.png">
+        </div>
         <aside class="side_menu">
             <div class="side_menu-title">
+                <div class="side_menu-burger">
+                    <div class="burger_top"></div>
+                    <div class="burger_middle"></div>
+                    <div class="burger_bottom"></div>
+                </div>
                 <h3>Меню</h3>
             </div>
             <ul class="side_menu-list">
-                <!-- <li><img src="../sp/img/sidemenu/basket-50.png">наборы</li> -->
-                <li class="side_menu-list-active"><img src="../sp/img/sidemenu/salad-50.png">Салаты</li>
-                <li><img src="../sp/img/sidemenu/hot-soup-50.png">Горячие блюда</li>
-                <li><img src="../sp/img/sidemenu/porridge-50.png">Гарниры</li>
-                <li><img src="../sp/img/sidemenu/sauce-50.png">Соуса</li>
-                <li><img src="../sp/img/sidemenu/coca-cola-50.png">Напитки</li>
-                <li><img src="../sp/img/sidemenu/dessert-50.png">Выпечка и десерты</li>
-                <li><img src="../sp/img/sidemenu/barbecue-50.png">Шашлык</li>
+                <!-- <li><img src="../img/sidemenu/basket-50.png">наборы</li> -->
+                <li class="side_menu-item-active"><img src="../img/sidemenu/salad-50.png">Салаты</li>
+                <li><img src="../img/sidemenu/hot-soup-50.png">Горячие блюда</li>
+                <li><img src="../img/sidemenu/porridge-50.png">Гарниры</li>
+                <li><img src="../img/sidemenu/sauce-50.png">Соуса</li>
+                <li><img src="../img/sidemenu/coca-cola-50.png">Напитки</li>
+                <li><img src="../img/sidemenu/dessert-50.png">Выпечка и десерты</li>
+                <li><img src="../img/sidemenu/barbecue-50.png">Шашлык</li>
             </ul>
-            <div class="side_menu-backet empty_basket">
-                <div class="side_menu-backet-count">0</div>
-                <img src="../sp/img/sidemenu/ingridients-black-50.png">Корзина
+            <div class="side_menu-basket-btn side_menu-basket hidden">
+                <div class="side_menu-basket-count">0</div>
+                <img src="../img/sidemenu/ingridients-black-50.png">Корзина
             </div>
         </aside>
         <article class="dishes_list">
             <div class="dishes">
-                <div class="empty_dish_item" data-id="0">
+                <div class="empty_dish_item hidden" data-id="0">
                     <div class="dish_item-description">
-                        <img class="dish_item-img" src="../sp/img/dishes/no_image-800x800.png">
+                        <img class="dish_item-img" src="../img/dishes/no_image-800x800.png">
                         <div class="dish_item-title">Название блюда</div>
                         <div class="dish_item-weight">
                             <div class="dish_item-weight-number">0</div>
@@ -113,8 +129,8 @@
                             <div class="dish_item-price-number">0</div>
                             <div class="dish_item-price-letter">&#8381;</div>
                         </div>
-                        <button class="dish_item-btn dish_item-btn-visible">Добавить</button>
-                        <div class="dish_item-counter">
+                        <button class="dish_item-btn">Добавить</button>
+                        <div class="dish_item-counter hidden">
                             <svg viewBox="0 0 100 100" class="dish_item-counter-dec">
                                 <line x1="5" y1="50" x2="95" y2="50" stroke-width="9" stroke="black" stroke-linecap="round"/>
                             </svg>
@@ -131,7 +147,6 @@
     </div>
     
 
-
-    <script type="text/javascript" src="../sp/js/main.js"></script>
+    <script type="text/javascript" src="/js/main.js"></script>
 </body>
 </html>
