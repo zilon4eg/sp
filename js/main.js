@@ -260,10 +260,12 @@ function burgerMenu() {
     const burgerMenuMibile = document.querySelector('.side_menu-burger-mobile');
     const sideMenuBasketMobile = document.querySelector('.side_menu-basket-mobile');
     const sideMenu = document.querySelector('.side_menu');
+    const dishesList = document.querySelector('.dishes_list');
     burgerMenuMibile.addEventListener('click', () => {
         burgerMenuMibile.style.display = 'none';
         sideMenuBasketMobile.style.display = 'none';
         sideMenu.style.display = 'flex';
+        dishesList.style.width = '';
     });
 
     const burgerMenu = document.querySelector('.side_menu-burger');
@@ -271,6 +273,7 @@ function burgerMenu() {
         burgerMenuMibile.style.display = '';
         sideMenuBasketMobile.style.display = '';
         sideMenu.style.display = 'none';
+        dishesList.style.width = 'calc(100% - 200px)';
     });
 }
 
@@ -283,9 +286,11 @@ function orientationChange() {
             const burgerMenuMibile = document.querySelector('.side_menu-burger-mobile');
             const sideMenuBasketMobile = document.querySelector('.side_menu-basket-mobile');
             const sideMenu = document.querySelector('.side_menu');
+            const dishesList = document.querySelector('.dishes_list');
             burgerMenuMibile.style.display = 'none';
             sideMenuBasketMobile.style.display = 'none';
             sideMenu.style.display = 'flex';
+            dishesList.style.width = '';
         }
     }, false);
 }
