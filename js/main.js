@@ -266,7 +266,7 @@ function burgerMenu() {
         sideMenuBasketMobile.style.display = 'none';
         sideMenu.style.display = 'flex';
         dishesList.style.width = 'calc(100% - 200px)';
-        scrollTo('modal_windows', 'top');
+        scrollTo('side_menu', 'top');
     });
 
     const burgerMenu = document.querySelector('.side_menu-burger');
