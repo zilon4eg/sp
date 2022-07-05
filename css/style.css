@@ -217,8 +217,7 @@ body {
 }
 
 .dishes_list {
-  /* width: 100%; */
-  width: calc(100%-200px);
+  width: calc(100% - 200px);
 }
 
 .dishes {
